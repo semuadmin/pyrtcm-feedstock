@@ -1,5 +1,5 @@
 {% set name = "pyrtcm" %}
-{% set version = "1.1.12" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyrtcm-{{ version }}.tar.gz
-  sha256: dfc86ae158c901e56d296e02f00b7886c4dbc5b453380c67b8722678ab8eb68e
+  sha256: 3880a900292aeed6e3d053a68c20c6f183cabe0bd9ad65e74c2a08f4848cc5cc
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - pynmeagps >=1.1.2
+    - pynmeagps >=1.1.5
 
 test:
   imports:
